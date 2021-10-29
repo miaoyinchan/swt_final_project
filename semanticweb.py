@@ -6,9 +6,9 @@ from flask_cors import CORS, cross_origin
 import pandas as pd
 
 
-api = Flask(__name__)
-cors = CORS(api)
-api.config['CORS_HEADERS'] = 'Content-Type'
+# api = Flask(__name__)
+# cors = CORS(api)
+# api.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @api.route('/results', methods=['POST'])
@@ -63,8 +63,12 @@ SELECT * WHERE {
     return query;
 
 
+def main():
+    interests = ["restaurant", "museum", "hotel"]
+    get_query("US", interests)
+    get_companies()
 
 
 if __name__ == "__main__":
-    api.run()
-
+    # api.run()
+    main()
