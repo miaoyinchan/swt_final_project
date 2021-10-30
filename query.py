@@ -5,7 +5,7 @@ from pprint import pprint
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 
-LEISURE = [
+INTERESTS = [
     "bandstand",
     "beach_resort",
     "bird_hide",
