@@ -1,73 +1,10 @@
 #!/usr/bin/env python
 
 from pprint import pprint
-
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-
-INTERESTS = [
-    "bandstand",
-    "beach_resort",
-    "bird_hide",
-    "bowling_alley",
-    "dance",
-    "dog_park",
-    "escape_game",
-    "firepit",
-    "fishing",
-    "fitness_centre",
-    "garden",
-    "golf_course",
-    "hackerspace",
-    "horse_riding",
-    "ice_rink",
-    "nature_reserve",
-    "park",
-    "picnic_table",
-    "playground",
-    "resort",
-    "sauna",
-    "sports_hall",
-    "stadium",
-    "summer_camp",
-    "swimming_area",
-    "swimming_pool",
-    "tanning_salon",
-    "trampoline_park",
-    "water_park",
-    "wildlife_hide",
-    "alphine_hut",
-    "apartment",
-    "aquarium",
-    "artwork",
-    "attraction",
-    "camp_site",
-    "caravan_site",
-    "chalet",
-    "gallery",
-    "guest_house",
-    "hostel",
-    "hotel",
-    "information",
-    "motel",
-    "museum",
-    "theme_park",
-    "viewpoint",
-    "wilderness_hut",
-    "zoo",
-    "bar",
-    "biergarten",
-    "cafe",
-    "casino",
-    "fast_food",
-    "food_court",
-    "ice_cream",
-    "pub",
-    "restaurant",
-    "bicycle_rental",
-    "boat_rental",
-    "car_rental",
-]
+import interests
+import countries
 
 
 def get_query(country, interests):
