@@ -1,10 +1,11 @@
-Country,Interest 1,Interest 2,Interest 3,Interest 4,Interest 5,Output,Result (acceptable/unacceptable)
-Andorra,theme_park,museum,attraction,restaurant,car_rental,,
-The Netherlands,escape_game,park,stadium,gallery,cafe,,
-Afghanistan,zoo,swimming_area,sauna,theme_park,gallery,,
-United States of America,bar,golf_course,hackerspace,museum,food_court,,
-North Korea,park,wildlife_hide,gallery,sauna,zoo,,
-South Korea,escape_game,gallery,theme_park,dance,park,,
-Vietnam,aquarium,golf_course,restaurant,zoo,sauna,,
-China,stadium,casino,cafe,dance,gallery,,
-Cuba,theme_park,escape_game,restaurant,sauna,pub,,
+Country,Interest 1,Interest 2,Output,Result (acceptable/unacceptable)
+Andorra,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+The Netherlands,restaurant,attraction,"good output, but not many as reality",acceptable
+Afghanistan,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+United States of America,restaurant,zoo,"good output, but not many as reality",acceptable
+North Korea,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+South Korea,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+Vietnam,restaurant,zoo,"only work for restaurant, also not many results as reality","from codes, or OSM doesn’t have data for this country"
+China,restaurant,,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+Cuba,restaurant,,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
+Australia,restaurant,zoo,"only work for restaurant, also not many results as reality","from codes, or OSM doesn’t have data for this country"
