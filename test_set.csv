@@ -1,11 +1,24 @@
-Country,Interest 1,Interest 2,Output,Result (acceptable/unacceptable)
-Andorra,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-The Netherlands,restaurant,attraction,"good output, but not many as reality",acceptable
-Afghanistan,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-United States of America,restaurant,zoo,"good output, but not many as reality",acceptable
-North Korea,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-South Korea,restaurant,attraction,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-Vietnam,restaurant,zoo,"only work for restaurant, also not many results as reality","from codes, or OSM doesn’t have data for this country"
-China,restaurant,,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-Cuba,restaurant,,doesn’t work even with only 1 interest,"from codes, or OSM doesn’t have data for this country"
-Australia,restaurant,zoo,"only work for restaurant, also not many results as reality","from codes, or OSM doesn’t have data for this country"
+Country,Interest 1,Interest 2,Output,
+Test 1,,,,
+Andorra,restaurant,,no result,
+The Netherlands,restaurant,,"only results for Amsterdam, Borger, Oudega, Overveen (only 1 or 2 restaurants for 1 place)",
+Afghanistan,restaurant,,no result,
+Canada,restaurant,,no result,unexpected
+North Korea,restaurant,,no result,
+South Korea,restaurant,,no result,unexpected
+Vietnam,restaurant,,"Only 2 results for Can Tho, Ha Noi (only 1 for CT, 3 for HN)",
+Greece,restaurant,,"Alimos, Athens, Vari, Vouliagmeni, Glyfada, Ermoupoli, Kallithea, Karditsa, Kifisia, Pireas, Chalcis",
+Cuba,restaurant,,no result,
+Australia,restaurant,,"Only 3 results for Bendigo, Eltham, West Melbourne (more results for each place)",
+,,,,
+Test 2,,,,
+Andorra,restaurant,attraction,no result,
+The Netherlands,restaurant,attraction,only in Amsterdam,
+Afghanistan,restaurant,attraction,no result,
+Canada,restaurant,attraction,no result,
+North Korea,restaurant,attraction,no result,
+South Korea,restaurant,attraction,no result,
+Vietnam,restaurant,attraction,only in Ha Noi,
+Greece,restaurant,attraction,only in Athens,
+Cuba,restaurant,attraction,no result,
+Australia,restaurant,attraction,no result,
