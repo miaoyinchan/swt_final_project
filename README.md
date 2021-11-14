@@ -30,11 +30,12 @@
  ```
  
  The user will then need to run the angular project by using the following instructions
-    ```
- cd Backend
+   
+ ```
+ cd angularadmin-master
  ```
   ```
- python SemanticWeb.py
+ ng serve --open
  ```
  
   
