@@ -15,4 +15,28 @@
   ```
   pip install -U flask-cors
  ```
+ 
+  ## Running the Web App
+  
+  First of all the user needs to start the Flask server by going into the Backend directory and running SemanticWeb.py
+  
+  Code:
+  
+   ```
+ cd Backend
+ ```
+  ```
+ python SemanticWeb.py
+ ```
+ 
+ The user will then need to run the angular project by using the following instructions
+    ```
+ cd Backend
+ ```
+  ```
+ python SemanticWeb.py
+ ```
+ 
+  
+  
 
