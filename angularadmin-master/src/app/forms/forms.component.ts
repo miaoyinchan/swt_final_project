@@ -55,7 +55,7 @@ export class FormsComponent implements OnInit {
     {name:"Bar",value:"bar"},
     {name:"Biergarten",value:"biergarten"},
     {name:"Cafe",value:"cafe"},
-    {name:"casino",value:"casino"},
+    {name:"Casino",value:"casino"},
     {name:"Fast Food",value:"fast_food"},
     {name:"Food Court",value:"food_court"},
     {name:"Ice Cream",value:"ice_cream"},
@@ -66,9 +66,6 @@ export class FormsComponent implements OnInit {
     {name:"Car Rental",value:"car_rental"},
 ]
 
-
-  public template1 = "For "
-  public template2 = "there are: "
   public pageData;
   public output = false ;
   public output2 = false ;
@@ -77,7 +74,6 @@ export class FormsComponent implements OnInit {
   dataSource2:any;
   interests_list:any
   toDisplay:any
-  toDisplay2:any
   count = 0;
   showDistances =false;
 
@@ -93,7 +89,6 @@ export class FormsComponent implements OnInit {
     let ac = {}
     var y = 'name'
     var desc = 'desc'
-    console.log(this.results)
     for (let i = 0; i < this.results.length; i++) {
       if (this.results[i].city.value in d){
         console.log("pass")
@@ -114,7 +109,6 @@ export class FormsComponent implements OnInit {
         for (let x = 0; x < this.interests_list.length; x++) {
           y = y + (x+1)+''
           desc = desc+(x+1)+''
-          console.log(y)
           if( d[this.results[i].city.value ]['interests'].indexOf(this.results[i][y].value) !== -1){
             console.log("pass")
           }
@@ -126,34 +120,8 @@ export class FormsComponent implements OnInit {
         }
 
     }
-    console.log(d)
     return d;
   }
-
-  generateResultHousing(){
-    let d = {}
-    console.log(this.results)
-    for (let i = 0; i < this.results.length; i++) {
-      if (this.results[i].city.value in d){
-        console.log("pass")
-      } else{
-        d[this.results[i].city.value ] = {}
-      }
-          if( this.results[i].stay.value in d[this.results[i].city.value ]){
-            console.log("pass")
-          } else{
-            d[this.results[i].city.value ][this.results[i].stay.value] = {}
-            d[this.results[i].city.value ][this.results[i].stay.value]['street'] = this.results[i].street.value
-            d[this.results[i].city.value ][this.results[i].stay.value]['number'] = this.results[i].housenumber.value
-            d[this.results[i].city.value ][this.results[i].stay.value]['coordinates'] = this.results[i].coordinates.value
-          }
-
-
-    }
-    console.log(d)
-    return d;
-  }
-
 
   showInput(){
     if(this.show2){
@@ -183,7 +151,7 @@ export class FormsComponent implements OnInit {
     this.show3 = false;
     this.show4 = false;
     this.show5 = false;
-    this.interests_list = []
+    this.checkoutForm.reset();
   }
 
 
@@ -206,15 +174,12 @@ export class FormsComponent implements OnInit {
 
   ngOnInit() {
     this.pageData = <any>this.route.snapshot.data;
-    console.log(this.interest)
-
   }
 
   onSubmit(): void {
 
     this.interests_list = [this.checkoutForm.value.interest1,this.checkoutForm.value.interest2,this.checkoutForm.value.interest3,this.checkoutForm.value.interest4,this.checkoutForm.value.interest5]
     this.interests_list = this.interests_list.slice(0,this.count+1)
-    console.log(this.interests_list)
 
     let request = { country: this.checkoutForm.value.name,
       tourism:this.interests_list
@@ -228,7 +193,6 @@ onClick(coordinates:String):void{
     coord:coordinates
   }
   this.getInterests(request);
-  console.log("end")
 }
 
   private async getData(request:any){
@@ -241,40 +205,23 @@ onClick(coordinates:String):void{
       this.tracker = 1;
       this.output = true;
     }
-    console.log( this.tracker)
 
     this.toDisplay = this.generateResultText()
-    this.toDisplay2 = this.generateResultHousing()
-    console.log(this.toDisplay2 )
+
 
     this.searching = false;
     this.checkoutForm.reset();
   }
 
   getDistanceTable(distances:any){
-    console.log(distances)
     this.dataSource = new MatTableDataSource<any>(distances);
     this.showDistances = true
   }
 
-  // getRankedResults(results){
-  //   var hotels = []
-  //   let request = { distance: 300,
-  //     interests:this.interests_list,
-  //     coord:coordinates
-  //   }
-  //   Object.keys(results).forEach( e =>{hotels = [];
-  //     Object.keys(results[e]).forEach(
-  //   es => {
-  //     hotels.push(results[e][es])
-
-  //   });console.log(this.travelService.getInterests_distances$(,))}
-  //   )
-  // }
 
 
   private async getInterests(request:any){
-    this.results = await this.travelService.getInterests$(request).toPromise();
+    this.results = await this.travelService.getDistances$(request).toPromise();
 
     this.output2= true;
     this.dataSource2 = new MatTableDataSource<any>(this.results);

@@ -14,7 +14,6 @@
                      <label class="col-sm-3 control-label" for="form-control-8" >
                        Country
                       </label>
-                      <!-- <input id="name" type="text" formControlName="name"> -->
                       <select formControlName="name">
                         <option [ngValue]="null" disabled>Select Country</option>
                         <option id="name" *ngFor="let int of this.COUNTRIES|keyvalue" [ngValue]="int.key" >{{int.value}}</option>
@@ -88,7 +87,7 @@
 </div>
 <ng-template #other_content1>
   <div class="" id="page-wrapper" *ngIf="this.showDistances;else other_content" >
-    <button (click)="this.showDistances=false">Back to Form</button>
+    <button (click)="this.showDistances=false">Back</button>
     <div class="container-fluid">
   <table mat-table [dataSource]="this.dataSource">
 
@@ -96,9 +95,6 @@
       <th mat-header-cell *matHeaderCellDef>{{disCol}}</th>
       <td mat-cell *matCellDef="let element">{{element[disCol]}}</td>
     </ng-container>
-
-
-
     <tr mat-header-row *matHeaderRowDef="columns$ "></tr>
     <tr mat-row *matRowDef="let row; columns: columns$  "></tr>
   </table>
@@ -109,7 +105,7 @@
 
 <ng-template #other_content>
   <div class="" id="page-wrapper" *ngIf="!this.showDistances;else other_content1" >
-    <button (click)="this.output=false">Back to Form</button>
+    <button (click)="this.output=false">Back</button>
 
 
 <div *ngFor="let item of this.toDisplay|keyvalue">

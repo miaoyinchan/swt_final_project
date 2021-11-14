@@ -7,40 +7,28 @@
                       <div class="media-body">
                           <h5 class="md-title nomargin">Recommendation</h5>
                           <h1 class="mt5">{{this.city}}</h1>
-                      </div><!-- media-body -->
+                      </div>
                       <hr>
                       <div class="clearfix mt20" >
                         <p>
                           Based on your given interest we recommend you go and visit {{this.city}}.  This city has areas that match your interest, which were the following: <br/>
                           <div *ngFor="let item of this.value['interests']" >
-
-
-
                               {{item}} - {{localData[item]}} <br/>
                               Nearest accommodation: {{this.hotel[item]}}<br/>
-
-
-
                           </div>
-
-                          <!-- <mat-nav-list>
-                            <a mat-list-item href="..." *ngFor="let link of links"> {{ link }} </a>
-                         </mat-nav-list> -->
 
                       </div>
 
-                  </div><!-- panel-body -->
-              </div><!-- panel -->
-          </div><!-- col-md-4 -->
+                  </div>
+              </div>
+          </div>
 
 <div class="col-lg-4 col-md-6">
   <div class="panel panel-default">
       <div class="panel-default">
-          <!-- <div class="panel-icon"><i class="fa fa-users"></i></div> -->
           <div class="media-body">
-              <!-- <h5 class="md-title nomargin">Accomedations</h5> -->
               <h1 class="mt5">Accommodations</h1>
-          </div><!-- media-body -->
+          </div>
           <hr>
           <div class="clearfix mt20">
 
