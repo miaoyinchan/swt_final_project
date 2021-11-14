@@ -3,11 +3,9 @@ Runs on flask server with multiple Rest Api endpoints
 """
 
 #!/usr/bin/env python
-#alias python=/usr/local/bin/python3
 from SPARQLWrapper import SPARQLWrapper, JSON
 from flask import Flask, request,json, jsonify
 from flask_cors import CORS, cross_origin
-import pandas as pd
 
 
 api = Flask(__name__)
