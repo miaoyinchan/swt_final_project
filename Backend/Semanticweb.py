@@ -67,17 +67,6 @@ INTERESTS = [
     "car_rental",
 ]
 
-Housing = ["motel", "guest_house",
-    "hostel",
-    "hotel",
-     "chalet",
-     "camp_site",
-    "caravan_site",
-     "apartment",
-         "resort",
-             "beach_resort"
-]
-
 
 @api.route('/results', methods=['POST'])
 @cross_origin()
@@ -146,7 +135,6 @@ def get_nearest_hotel():
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
     response = jsonify(results['results']['bindings'])
-    print(results['results']['bindings'])
     response.headers.add('Access-Control-Allow-Origin', 'POST')
 
     return response
@@ -347,12 +335,7 @@ SELECT ?label WHERE {
     osmm:loc ?coordinates.
 """
     query += query_section
-    for i in hotel_list:
-        if hotel_list[-1] == i:
-            hotel = f"\"{i}\""
-        else:
-            hotel = f"\"{i}\","
-        hotels +=hotel
+    hotels = ",".join(f'"{h}"' for h in hotel_list)
     query_section = f"""  ?result1 osmt:addr:country  ?country;
        (osmt:tourism|osmt:leisure|osmt:amenity) ?interest;
         osmt:name "{interest}";
