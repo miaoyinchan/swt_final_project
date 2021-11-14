@@ -6,7 +6,13 @@
  
  To run this project you need to have angular installed, please follow the instructions listed in https://angular.io/guide/setup-local. 
  This project also requires the user the have the following library installed:
-     #SPARQLWrapper
-     #flask
-     #flask_cors
+ ```
+ pip install sparqlwrapper
+ ```
+  ```
+ pip install Flask
+ ```
+  ```
+  pip install -U flask-cors
+ ```
 
