@@ -19,8 +19,7 @@
   ## Running the Web App
   
   First of all the user needs to start the Flask server by going into the Backend directory and running SemanticWeb.py
-  
-  Code:
+  The user can start the backend by using the following instructions:
   
    ```
  cd Backend
@@ -29,7 +28,7 @@
  python SemanticWeb.py
  ```
  
- The user will then need to run the angular project by using the following instructions
+ The user will then need to run the angular project in a different terminal by using the following instructions
    
  ```
  cd angularadmin-master
