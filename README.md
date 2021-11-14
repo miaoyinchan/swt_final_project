@@ -28,7 +28,7 @@
  python SemanticWeb.py
  ```
  
- The user will then need to run the angular project in a different terminal by using the following instructions
+ The user will then need to run the angular project in a different terminal using the following instructions
    
  ```
  cd angularadmin-master
